@@ -6,7 +6,8 @@ const certifications = [
     issuer: 'HackerRank',
     issuedDate: '2025',
     url: 'https://www.hackerrank.com/certificates/09b911dea5ec',
-    image: 'https://images.pexels.com/photos/32422954/pexels-photo-32422954.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image:
+      'https://images.pexels.com/photos/32422954/pexels-photo-32422954.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   },
   {
     title: 'Problem Solving (Basic)',
@@ -18,12 +19,17 @@ const certifications = [
   // Add more certificates if needed
 ];
 
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 40 },
+// Animation variants: slide from left with staggered delay
+const slideFromLeftVariants = {
+  hidden: { opacity: 0, x: -100 },
   visible: (i: number) => ({
     opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.2, duration: 0.6, ease: 'easeOut' },
+    x: 0,
+    transition: {
+      delay: i * 0.3, // stagger delay
+      duration: 0.8,
+      ease: 'easeOut',
+    },
   }),
 };
 
@@ -34,6 +40,7 @@ export default function Certifications() {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-500 mb-12">
           Certifications
         </h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {certifications.map((cert, i) => (
             <motion.a
@@ -45,7 +52,7 @@ export default function Certifications() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              variants={fadeUpVariants}
+              variants={slideFromLeftVariants}
               className="block rounded-xl overflow-hidden shadow-md bg-white dark:bg-secondary-800 hover:shadow-xl hover:scale-105 transition-transform duration-300"
             >
               <img
@@ -67,3 +74,4 @@ export default function Certifications() {
     </section>
   );
 }
+
