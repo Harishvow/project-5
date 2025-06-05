@@ -19,7 +19,7 @@ export default function About() {
         <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12 mb-12">
           {/* About Me Section */}
           <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-6 font-['Press_Start_2P']">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-6 ">
               About <span className="text-primary-500 dark:text-primary-400">Me</span>
             </h2>
 

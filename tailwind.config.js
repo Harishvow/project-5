@@ -8,10 +8,30 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif',],
-        retro: ['"Press Start 2P"', 'monospace'],
+        sans: ['Inter', 'sans-serif'],
       },
       colors: {
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
         primary: {
           50: '#e5f3ff',
           100: '#cce7ff',
@@ -24,6 +44,8 @@ export default {
           800: '#003666',
           900: '#001b33',
           950: '#000d1a',
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           50: '#f2f2f2',
@@ -37,6 +59,8 @@ export default {
           800: '#141414',
           900: '#0d0d0d',
           950: '#080808',
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         accent: {
           50: '#ffe5f0',
@@ -50,6 +74,8 @@ export default {
           800: '#66002a',
           900: '#330015',
           950: '#1a000b',
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
       },
       spacing: {
