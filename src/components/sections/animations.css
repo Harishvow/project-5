@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes floatUp {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes floatDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  @keyframes rotateSlight {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(3deg); }
+  }
+  @keyframes scalePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .animate-floatUp {
+    animation: floatUp 3.5s ease-in-out infinite;
+  }
+  .animate-floatDown {
+    animation: floatDown 3.5s ease-in-out infinite;
+  }
+  .animate-rotateSlight {
+    animation: rotateSlight 4s ease-in-out infinite;
+  }
+  .animate-scalePulse {
+    animation: scalePulse 3s ease-in-out infinite;
+  }
+}

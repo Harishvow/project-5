@@ -1,6 +1,38 @@
-import { ArrowRight } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
+import styles from "./Hero.module.css"; // Make sure path is correct
 
 export default function Hero() {
+  const texts = ["Hi, I'm Harish", "FullStack Developer"];
+  const [displayedText, setDisplayedText] = useState("");
+  const [textIndex, setTextIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
+    if (!deleting && charIndex <= texts[textIndex].length) {
+      timeout = setTimeout(() => {
+        setDisplayedText(texts[textIndex].slice(0, charIndex));
+        setCharIndex((prev) => prev + 1);
+      }, 150);
+    } else if (deleting && charIndex >= 0) {
+      timeout = setTimeout(() => {
+        setDisplayedText(texts[textIndex].slice(0, charIndex));
+        setCharIndex((prev) => prev - 1);
+      }, 100);
+    } else if (charIndex === texts[textIndex].length + 1) {
+      timeout = setTimeout(() => setDeleting(true), 1000);
+    } else if (charIndex === -1) {
+      setDeleting(false);
+      setTextIndex((prev) => (prev + 1) % texts.length);
+      setCharIndex(0);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, deleting, textIndex, texts]);
+
   return (
     <section className="min-h-screen flex items-center justify-center py-20 px-4 relative overflow-hidden">
       {/* Background Blobs */}
@@ -12,19 +44,28 @@ export default function Hero() {
       {/* Main Content */}
       <div className="text-center max-w-4xl mx-auto">
         <h1 className="text-3xl md:text-5xl font-bold text-secondary-900 dark:text-white mb-6 tracking-tight">
-          <span className="typing-demo text-primary-500 dark:text-primary-400">
-            Hi, I'm Harish
+          <span
+            className={`${styles.typing} text-primary-500 dark:text-primary-400`}
+            style={{
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              fontFamily: "monospace",
+              display: "inline-block",
+            }}
+          >
+            {displayedText}
           </span>
         </h1>
 
         <p className="text-xl md:text-2xl text-secondary-600 dark:text-secondary-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-          A passionate Python Developer crafting robust backend solutions and innovative web applications
+          A passionate Python Developer crafting robust backend solutions and
+          innovative web applications
         </p>
 
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white font-medium px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary-500/25"
+            className="inline-flex items-center gap-2 bg-blue-600 text-white font-medium px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_12px_rgba(59,130,246,0.5)] hover:bg-blue-500 active:bg-blue-600 focus:outline-none"
           >
             Get in Touch
             <ArrowRight className="w-4 h-4" />
@@ -38,31 +79,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-
-      {/* Inline Scoped CSS for Typing Animation */}
-      <style jsx>{`
-        .typing-demo {
-          width: 22ch;
-          animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-          white-space: nowrap;
-          overflow: hidden;
-          border-right: 3px solid;
-          font-family: monospace;
-          display: inline-block;
-        }
-
-        @keyframes typing {
-          from {
-            width: 0;
-          }
-        }
-
-        @keyframes blink {
-          50% {
-            border-color: transparent;
-          }
-        }
-      `}</style>
     </section>
   );
 }

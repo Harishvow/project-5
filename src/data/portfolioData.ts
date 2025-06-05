@@ -53,12 +53,21 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Harishvow/Password_Manager',
   },
   {
-    id: 2,
+    id: 5,
     title: 'WeatherDataApi',
     description: 'RESTful Weather Data API using Python (Flask) that serves historical climate data from various global weather stations.',
     image: 'https://images.pexels.com/photos/32358153/pexels-photo-32358153/free-photo-of-modern-weather-station-against-clear-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     tags: ['Python', 'Flask', 'APIs'],
     githubUrl: 'https://github.com/Harishvow/WeatherDataAPI',
+  },
+  {
+    id: 6,
+    title: 'Weather Forecastdata Api',
+    description: 'It is simple and basic Api for Checking The Weather For Next Few Days For Any Location.',
+    image: 'https://images.pexels.com/photos/32358153/pexels-photo-32358153/free-photo-of-modern-weather-station-against-clear-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    tags: ['Python', 'Streamlit', 'APIs'],
+    liveUrl: 'https://forecastdata.streamlit.app/',
+    githubUrl: 'https://github.com/Harishvow/Forecastdata-Webapp',
   },
 ];
 
