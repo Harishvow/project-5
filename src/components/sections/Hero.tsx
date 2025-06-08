@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
-import styles from "./Hero.module.css"; // Make sure path is correct
+import styles from "./Hero.module.css"; 
 
 export default function Hero() {
-  const texts = ["Hi, I'm Harish", "FullStack Developer"];
+  const texts = ["Harish", "FullStack Developer"];
   const [displayedText, setDisplayedText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
