@@ -13,7 +13,7 @@ export const SkillsGrid: React.FC<SkillsGridProps> = ({ skills }) => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-50/30 to-transparent dark:via-primary-900/10" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 dark:text-white mb-4 tracking-tight">
-          My <span className="text-primary-500 dark:text-primary-400">Skillset</span>
+          My <span className="text-primary-500 dark:text-primary-400">Tech Stack</span>
         </h2>
         <p className="text-lg text-secondary-600 dark:text-secondary-300 max-w-2xl mx-auto mb-12">
           A showcase of my technical expertise and proficiency in various tools and technologies.

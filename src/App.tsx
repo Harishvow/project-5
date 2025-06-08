@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { ThemeToggle } from './components/ui/ThemeToggle';
-import SkillsGrid from './components/skills/SkillsGrid';
+import {SkillsGrid} from "@/components/skills/SkillsGrid";
 import { allSkills } from "@/data/skills";
 import Header from './components/layout/Header';
 import Hero from './components/sections/Hero';

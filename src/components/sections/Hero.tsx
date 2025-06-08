@@ -63,13 +63,19 @@ export default function Hero() {
         </p>
 
         <div className="flex items-center justify-center gap-4 flex-wrap">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 bg-blue-600 text-white font-medium px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_12px_rgba(59,130,246,0.5)] hover:bg-blue-500 active:bg-blue-600 focus:outline-none"
-          >
-            Get in Touch
-            <ArrowRight className="w-4 h-4" />
-          </a>
+       <a
+          href="#contact"
+          className="inline-flex items-center gap-2 bg-white text-black font-medium px-8 py-3 rounded-full transition-transform duration-300 hover:scale-105 hover:bg-gray-100 active:bg-gray-200 shadow-md focus:outline-none focus:ring-0"
+          style={{
+            WebkitTapHighlightColor: 'transparent', 
+            color: 'black', 
+          }}
+        >
+          Get in Touch
+          <ArrowRight className="w-4 h-4 text-black" />
+        </a>
+
+
           <a
             href="#projects"
             className="inline-flex items-center gap-2 bg-white dark:bg-secondary-800 text-secondary-900 dark:text-white font-medium px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-secondary-500/25"
