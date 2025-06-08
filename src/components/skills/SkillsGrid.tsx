@@ -23,7 +23,7 @@ export const SkillsGrid: React.FC<SkillsGridProps> = ({ skills }) => {
           {skills.map((skill) => (
             <div
               key={skill.id}
-              className="flex flex-col items-center bg-white dark:bg-secondary-800 rounded-lg p-6 shadow hover:shadow-lg transition-shadow cursor-default"
+              className="flex flex-col items-center bg-white dark:bg-secondary-800 rounded-lg p-6 shadow hover:shadow-lg transition-shadow cursor-default animate-float"
             >
               <img
                 src={skill.icon}
