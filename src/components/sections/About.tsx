@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 bg-white/50 dark:bg-secondary-900/50 relative overflow-hidden"
+      className="py-20 bg-white/50 dark:bg-secondary-900/50 relative overflow-hidden flex items-center justify-center"
     >
       {/* Background Blur Circles */}
       <div className="absolute inset-0 -z-10">
@@ -16,10 +16,10 @@ export default function About() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Flex Container for About + Skills */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12 mb-12">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12 mb-12">
           {/* About Me Section */}
-          <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-6 ">
+          <div className="lg:w-1/2 text-center lg:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 dark:text-white mb-6">
               About <span className="text-primary-500 dark:text-primary-400">Me</span>
             </h2>
 
@@ -71,7 +71,7 @@ export default function About() {
         </div>
 
         {/* Education Section */}
-        <div className="bg-white dark:bg-secondary-800 rounded-xl p-6 shadow-lg max-w-3xl mx-auto">
+        <div className="bg-white dark:bg-secondary-800 rounded-xl p-6 shadow-lg max-w-3xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-6">Education</h3>
           {education.map((edu) => (
             <div key={edu.id} className="mb-4 last:mb-0">

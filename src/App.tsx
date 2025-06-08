@@ -34,11 +34,11 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-primary-50 dark:from-secondary-950 dark:to-secondary-900 transition-colors duration-300 overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-white to-primary-50 dark:from-secondary-950 dark:to-secondary-900 transition-colors duration-300 overflow-x-hidden flex flex-col items-center justify-center">
       <ThemeToggle />
       <Header />
 
-      <main className="relative">
+      <main className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Background Blobs */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl animate-pulse-slow" />
@@ -49,29 +49,30 @@ function App() {
         <Hero />
 
         {/* About Section */}
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full">
           <About />
         </div>
+
         {/* Skills Section */}        
         <section className="py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-50/30 to-transparent dark:via-primary-900/10" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative text-center">
             <SkillsGrid skills={allSkills} />
           </div>
         </section>
 
         {/* Projects Section */}
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full">
           <Projects />
         </div>
 
         {/* Certifications Section */}
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full">
           <Certifications />
         </div>
 
         {/* Contact Section */}
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full">
           <Contact />
         </div>
       </main>
