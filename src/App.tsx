@@ -38,7 +38,7 @@ function App() {
       <ThemeToggle />
       <Header />
 
-      <main className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="relative w-full mx-a px-4 sm:px-6 lg:px-8">
         {/* Background Blobs */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl animate-pulse-slow" />
